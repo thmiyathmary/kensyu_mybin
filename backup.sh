@@ -17,6 +17,7 @@ backup () {
             parentDir=${path%/*}
             mkdir -p "${backupDir}/${currentTime}${parentDir}"
             cp -r $path "${backupDir}/${currentTime}${parentDir}"
+            echo "backuped in ${backupDir}/${currentTime}${parentDir} "
         else
             echo "${path} is not exist. Absolute path required."
         fi
